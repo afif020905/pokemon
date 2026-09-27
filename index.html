@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Pokémon API Card</title>
+  <link rel="stylesheet" href="pokemon.css">
+</head>
+<body>
+  <main class="app">
+    <header class="hero">
+      <p class="eyebrow">PokéAPI Explorer</p>
+      <h1>Pokémon Card Explorer</h1>
+      <p>Search for one Pokémon and view its complete details.</p>
+    </header>
+    <section class="search-box">
+      <form id="pokemonForm">
+        <label for="pokemonInput">Pokémon name :</label>
+        <div class="search-row">
+          <input
+            id="pokemonInput"
+            type="text"
+            placeholder="Enter the pokemon name"
+            autocomplete="off"
+            required
+          >
+          <button type="submit">Search</button>
+        </div>
+        <!-- Suggestion list of search -->
+        <ul id="suggestions" class="suggestions-list" hidden></ul>
+      </form>
+      <p id="message" class="message">Loading initial data...</p>
+    </section>
+    <section id="pokemonContainer" class="pokemon-container" aria-live="polite"></section>
+  </main>
+  <script src="pokemon.js"></script>
+</body>
+</html>
